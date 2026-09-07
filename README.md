@@ -1,4 +1,4 @@
-# API REST de Colegio — Express + PostgreSQL
+# API REST de Colegio — Express + PostgreSQL + JWT
 
 Proyecto educativo de la materia **DAI** (ORT). Una API REST que hace CRUD de alumnos y cursos contra PostgreSQL, construida en **4 versiones incrementales** para que veas cómo se refactoriza código paso a paso: desde un solo archivo con todo adentro, hasta una arquitectura en capas con clases intercambiables de acceso a datos.
 
