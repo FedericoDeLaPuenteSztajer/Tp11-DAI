@@ -2,7 +2,6 @@ import jwt from "jsonwebtoken";
 
 const authMiddleware = (req, res, next) => {
     try {
-        // Obtener el header Authorization
         const authHeader = req.headers.authorization;
 
         if (!authHeader) {
@@ -11,8 +10,6 @@ const authMiddleware = (req, res, next) => {
             });
         }
 
-        // El formato esperado es:
-        // Authorization: Bearer <token>
         const [type, token] = authHeader.split(" ");
 
         if (type !== "Bearer" || !token) {
@@ -21,17 +18,12 @@ const authMiddleware = (req, res, next) => {
             });
         }
 
-        // Verificar el token
         const payload = jwt.verify(
             token,
             process.env.JWT_SECRET
         );
 
-        // Guardar el payload para que pueda ser utilizado
-        // posteriormente por el controller
         req.user = payload;
-
-        // Continuar con el siguiente middleware/controller
         next();
 
     } catch (error) {
@@ -55,28 +47,3 @@ const authMiddleware = (req, res, next) => {
 };
 
 export default authMiddleware;
-
-
-
-/*
-import jwt from "jsonwebtoken";
-
-// Token harcodeado
-const payload = {
-  id: 1234,
-  username: 'sub-zero'
-};
-
-const secretKey = '1234#'; 
-
-
-const options = {
-  expiresIn: '1h', 
-  issuer: 'mi_organizacion'
-};
-
-const token = jwt.sign(payload, secretKey, options);
-console.log(token); //eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiO...
-
-export default authMiddleware;
-*/

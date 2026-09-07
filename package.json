@@ -5,9 +5,8 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "server-noob": "cls && node --watch src/server-noob.js",
-    "server-noob-mejorada": "cls && node --watch src/server-noob-mejorada.js",
-    "server": "cls && node --watch src/server.js"
+    "server": "cls && node --watch src/server.js",
+    "generate-token": "cls && node --watch src/configs/generate-token.js"
   },
   "author": "",
   "license": "ISC",

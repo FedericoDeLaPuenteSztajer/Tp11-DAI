@@ -17,7 +17,7 @@ const port = process.env.PORT || 3000;  // si no esta definido en el archivo .en
 // Agrego los Middlewares
 app.use(cors());         // Middleware de CORS
 app.use(express.json()); // Middleware para parsear y comprender JSON
-app.use("/auth", AuthController);
+app.use("/auth", authMiddleware);
 
 // Endpoints (todos los Routers)
 app.use("/api/alumnos", authMiddleware, AlumnosController);
