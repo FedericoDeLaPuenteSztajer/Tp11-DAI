@@ -86,7 +86,7 @@ Importá la colección de Postman que está en:
 documents/postman/DAI - PG - Alumnos-cursos.postman_collection.json
 ```
 
-Tiene requests para todos los endpoints, incluyendo casos de error (404, 400). Como usamos verificación JWT se debe colocar en la pestaña "Authorization" el token copiado previamente.
+Tiene requests para todos los endpoints, incluyendo casos de error (404, 400). Como usamos verificación JWT se debe colocar en la pestaña "Authorization" el token copiado previamente del tipo "Bearer Token".
 
 ---
 
