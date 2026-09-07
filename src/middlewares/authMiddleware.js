@@ -36,7 +36,7 @@ const authMiddleware = (req, res, next) => {
 
         if (error.name === "JsonWebTokenError") {
             return res.status(401).json({
-                error: "Token inválido"
+                error: "Token inválido o incorrecto"
             });
         }
 
