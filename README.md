@@ -144,4 +144,5 @@ npm install pg              # driver PostgreSQL
 npm install dotenv          # variables de entorno desde .env
 npm install http-status-codes  # constantes legibles (StatusCodes.OK vs 200)
 npm install nodemon --save-dev # reinicio automático en desarrollo
+npm install jsonwebtoken # verificación JWT por token
 ```
