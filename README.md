@@ -1,4 +1,4 @@
-# API REST de Alumnos y Cursos — Express + PostgreSQL
+# API REST de Colegio — Express + PostgreSQL + JWT
 
 Proyecto educativo de la materia **DAI** (ORT). Una API REST que hace CRUD de alumnos y cursos contra PostgreSQL, construida en **4 versiones incrementales** para que veas cómo se refactoriza código paso a paso: desde un solo archivo con todo adentro, hasta una arquitectura en capas con clases intercambiables de acceso a datos.
 
@@ -144,4 +144,5 @@ npm install pg              # driver PostgreSQL
 npm install dotenv          # variables de entorno desde .env
 npm install http-status-codes  # constantes legibles (StatusCodes.OK vs 200)
 npm install nodemon --save-dev # reinicio automático en desarrollo
+npm install jsonwebtoken # verificación JWT por token
 ```
